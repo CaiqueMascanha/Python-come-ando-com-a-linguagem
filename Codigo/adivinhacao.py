@@ -4,11 +4,11 @@ print("********************************")
 
 numero_secreto = 42
 total_de_tentativas = 3
-rodada = 1
+
 
 # O "WHILE" TORNA UMA REPETIÇÃO
-while(rodada <= total_de_tentativas):
-  print(f"Tentativa {rodada} de:", total_de_tentativas)
+for rodada in range(1, total_de_tentativas + 1):
+  print(f"Tentativa {rodada} de: {total_de_tentativas}")
   chute = int(input("Digite um número: "))
   acertou = chute == numero_secreto
   maior = chute > numero_secreto
@@ -21,6 +21,6 @@ while(rodada <= total_de_tentativas):
   else:
     print("Você errou! Seu chute foi abaixo")
     
-  rodada = rodada + 1
+  
   
 print("Fim do jogo!")
